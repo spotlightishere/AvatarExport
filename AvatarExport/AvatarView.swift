@@ -9,11 +9,22 @@ import SceneKit
 import SwiftUI
 
 struct AvatarView: NSViewRepresentable {
+    let avatar: AVTAvatar
     let name: String
+
+    init(animoji: String) {
+        name = animoji
+        avatar = AVTAnimoji(named: animoji)
+    }
+    
+    init(memoji: AVTMemoji) {
+        name = "Neutral Animoji"
+        avatar = memoji
+    }
 
     func makeNSView(context _: Context) -> NSView {
         let avatarView = AVTView()
-        avatarView.avatar = AVTAnimoji(named: name)
+        avatarView.avatar = avatar
 
         let downloadsDirectory = FileManager.default.urls(for: .downloadsDirectory, in: .userDomainMask).first!
         let savePath = downloadsDirectory.appendingPathComponent("\(name).dae")
@@ -28,6 +39,6 @@ struct AvatarView: NSViewRepresentable {
 
 struct AvatarView_Previews: PreviewProvider {
     static var previews: some View {
-        AvatarView(name: "fox")
+        AvatarView(animoji: "fox")
     }
 }

@@ -1,2 +1,5 @@
+#import "AVTAvatar.h"
+#import "AVTPAvatarRecordDataSource.h"
 #import "AVTAnimoji.h"
+#import "AVTMemoji.h"
 #import "AVTView.h"

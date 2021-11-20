@@ -13,6 +13,7 @@
 		4296A22F2747F9CD00BBA14D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4296A22E2747F9CD00BBA14D /* Preview Assets.xcassets */; };
 		4296A240274813A100BBA14D /* AvatarKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4296A23F274813A100BBA14D /* AvatarKit.framework */; };
 		4296A2422748212200BBA14D /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4296A2412748212200BBA14D /* AvatarView.swift */; };
+		42CDAE7E2748F88600249005 /* AvatarPersistence.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42CDAE7D2748F88500249005 /* AvatarPersistence.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,10 @@
 		4296A23F274813A100BBA14D /* AvatarKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AvatarKit.framework; path = System/Library/PrivateFrameworks/AvatarKit.framework; sourceTree = SDKROOT; };
 		4296A2412748212200BBA14D /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
 		4296A243274824EF00BBA14D /* AVTView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AVTView.h; sourceTree = "<group>"; };
+		42CDAE7D2748F88500249005 /* AvatarPersistence.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AvatarPersistence.framework; path = System/Library/Frameworks/AvatarPersistence.framework; sourceTree = SDKROOT; };
+		42CDAE7F2748F8D900249005 /* AVTPAvatarRecordDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AVTPAvatarRecordDataSource.h; sourceTree = "<group>"; };
+		42CDAE832748FFCA00249005 /* AVTMemoji.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AVTMemoji.h; sourceTree = "<group>"; };
+		42CDAE842749001800249005 /* AVTAvatarRecord.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AVTAvatarRecord.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +41,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4296A240274813A100BBA14D /* AvatarKit.framework in Frameworks */,
+				42CDAE7E2748F88600249005 /* AvatarPersistence.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,12 +69,12 @@
 			isa = PBXGroup;
 			children = (
 				4296A2362748100E00BBA14D /* Headers */,
+				4296A2412748212200BBA14D /* AvatarView.swift */,
 				4296A2272747F9CC00BBA14D /* AvatarExportApp.swift */,
 				4296A2292747F9CC00BBA14D /* ContentView.swift */,
 				4296A22B2747F9CD00BBA14D /* Assets.xcassets */,
 				4296A2302747F9CD00BBA14D /* AvatarExport.entitlements */,
 				4296A22D2747F9CD00BBA14D /* Preview Content */,
-				4296A2412748212200BBA14D /* AvatarView.swift */,
 			);
 			path = AvatarExport;
 			sourceTree = "<group>";
@@ -85,6 +91,9 @@
 			isa = PBXGroup;
 			children = (
 				4296A2382748104000BBA14D /* AVTAvatar.h */,
+				42CDAE832748FFCA00249005 /* AVTMemoji.h */,
+				42CDAE842749001800249005 /* AVTAvatarRecord.h */,
+				42CDAE7F2748F8D900249005 /* AVTPAvatarRecordDataSource.h */,
 				4296A23B2748105400BBA14D /* AVTAnimoji.h */,
 				4296A243274824EF00BBA14D /* AVTView.h */,
 				4296A2372748104000BBA14D /* AvatarExport-Bridging-Header.h */,
@@ -95,6 +104,7 @@
 		4296A23C274811DD00BBA14D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				42CDAE7D2748F88500249005 /* AvatarPersistence.framework */,
 				4296A23F274813A100BBA14D /* AvatarKit.framework */,
 			);
 			name = Frameworks;
@@ -231,7 +241,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -286,7 +296,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
@@ -316,7 +326,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = space.joscomputing.AvatarExport;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -348,7 +358,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = space.joscomputing.AvatarExport;
 				PRODUCT_NAME = "$(TARGET_NAME)";
