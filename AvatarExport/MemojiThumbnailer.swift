@@ -23,20 +23,23 @@ class MemojiThumbnailer: NSObject {
         return records
     }
 
-    func thumbnailPuppet(record: AVTAvatarRecord) -> (NSImage, AVTAvatar) {
+    func renderPuppet(record: AVTAvatarRecord) -> AVTAvatar {
         // TODO: What does 1 signify?
-        let render = AVTAvatarRecordRendering.avatar(for: record, usageIntent: 1)
+        AVTAvatarRecordRendering.avatar(for: record, usageIntent: 1)
+    }
 
+    func thumbnailPuppet(record: AVTAvatarRecord) -> NSImage {
+        let render = renderPuppet(record: record)
         let generator = AVTStickerGenerator(avatar: render)
+        // Ensures completionHandler does not immediately return
         generator.setAsync(false)
 
         let configurations = AVTStickerConfiguration.stickerConfigurationsForMemoji(inStickerPack: kAVTStickerPackPoses)
         let first = configurations.firstObject! as! AVTStickerConfiguration
 
-        let image = generator.stickerImage(with: first, options: options, completionHandler: { rendered, avatar in
+        generator.stickerImage(with: first, options: options, completionHandler: { rendered, _ in
             self.rendered = rendered
-            self.avatar = avatar
         })
-        return (rendered!, avatar!)
+        return rendered!
     }
 }

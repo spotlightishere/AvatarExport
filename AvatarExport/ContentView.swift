@@ -19,9 +19,8 @@ struct ContentView: View {
             List {
                 ForEach(thumbnailer.allPuppets(), id: \.self) { record in
 
-                    let (rendered, avatar) = thumbnailer.thumbnailPuppet(record: record)
-                    NavigationLink(destination: AvatarView(avatar: avatar)) {
-                        Image(nsImage: rendered)
+                    NavigationLink(destination: AvatarView(record: record)) {
+                        Image(nsImage: thumbnailer.thumbnailPuppet(record: record))
                             .resizable()
                             .scaledToFit()
                     }

@@ -15,8 +15,8 @@ struct AvatarView: NSViewRepresentable {
         avatar = AVTAnimoji(named: animoji)
     }
 
-    init(avatar: AVTAvatar) {
-        self.avatar = avatar
+    init(record: AVTAvatarRecord) {
+        avatar = MemojiThumbnailer().renderPuppet(record: record)
     }
 
     func makeNSView(context _: Context) -> NSView {
