@@ -1,11 +1,12 @@
 //
-//  AVTAvatar.h
+//  AVTAvatarRecord.h
 //  AvatarExport
 //
 //  Created by Spotlight Deveaux on 2021-11-20.
 //
 
-#import <Foundation/Foundation.h>
+#ifndef AVTAvatarRecord_h
+#define AVTAvatarRecord_h
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -14,3 +15,5 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 NS_ASSUME_NONNULL_END
+
+#endif /* AVTAvatarRecord_h */

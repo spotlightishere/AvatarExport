@@ -10,16 +10,13 @@ import SwiftUI
 
 struct AvatarView: NSViewRepresentable {
     let avatar: AVTAvatar
-    let name: String
 
     init(animoji: String) {
-        name = animoji
         avatar = AVTAnimoji(named: animoji)
     }
-    
-    init(memoji: AVTMemoji) {
-        name = "Neutral Animoji"
-        avatar = memoji
+
+    init(avatar: AVTAvatar) {
+        self.avatar = avatar
     }
 
     func makeNSView(context _: Context) -> NSView {
@@ -27,7 +24,7 @@ struct AvatarView: NSViewRepresentable {
         avatarView.avatar = avatar
 
         let downloadsDirectory = FileManager.default.urls(for: .downloadsDirectory, in: .userDomainMask).first!
-        let savePath = downloadsDirectory.appendingPathComponent("\(name).dae")
+        let savePath = downloadsDirectory.appendingPathComponent("\(Date.now).scn")
 
         avatarView.scene?.write(to: savePath, options: nil, delegate: nil, progressHandler: nil)
 

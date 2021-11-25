@@ -20,9 +20,11 @@ NS_ASSUME_NONNULL_BEGIN
  *
  * @returns A data source with all Memoji
  */
-+ (AVTPAvatarRecordDataSource *)defaultUIDataSourceWithDomainIdentifier:(NSString *)domainIdentifier;
++ (AVTPAvatarRecordDataSource *)defaultUIDataSourceWithDomainIdentifier:
+    (NSString *)domainIdentifier;
 
--(AVTAvatarRecord*)recordAtIndex:(int)index;
+- (AVTAvatarRecord *)recordAtIndex:(int)index;
+- (int)numberOfRecords;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -8,36 +8,26 @@
 import SwiftUI
 
 struct ContentView: View {
+    let thumbnailer = MemojiThumbnailer()
+
     let bleh = [
-        AVTMemoji.neutral()
+        AVTMemoji.neutral(),
     ]
-    
+
     var body: some View {
         NavigationView {
             List {
-                ForEach(bleh, id: \.self) { name in
-                    NavigationLink(destination: AvatarView(memoji: name)) {
-//                        Image(nsImage: AVTAnimoji.thumbnail(forAnimojiNamed: name, options: nil))
-//                            .resizable()
-//                            .scaledToFit()
-                        Text("Neutral Animoji")
-                            .font(.caption)
-                    }
-                }
-                
-                ForEach(AVTAnimoji.animojiNames(), id: \.self) { name in
-                    NavigationLink(destination: AvatarView(animoji: name)) {
-                        Image(nsImage: AVTAnimoji.thumbnail(forAnimojiNamed: name, options: nil))
+                ForEach(thumbnailer.allPuppets(), id: \.self) { record in
+
+                    let (rendered, avatar) = thumbnailer.thumbnailPuppet(record: record)
+                    NavigationLink(destination: AvatarView(avatar: avatar)) {
+                        Image(nsImage: rendered)
                             .resizable()
                             .scaledToFit()
                     }
                 }
             }
-        }.onAppear(perform: {
-//            let heck = AVTPAvatarRecordDataSource.defaultUIDataSource(withDomainIdentifier: Bundle.main.bundleIdentifier!)
-//            let z = heck.record(at: 1)
-//            print(z)
-        })
+        }
     }
 }
 

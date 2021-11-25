@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		426FA7EE274F34160018AD9A /* MemojiThumbnailer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426FA7ED274F34160018AD9A /* MemojiThumbnailer.swift */; };
 		4296A2282747F9CC00BBA14D /* AvatarExportApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4296A2272747F9CC00BBA14D /* AvatarExportApp.swift */; };
 		4296A22A2747F9CC00BBA14D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4296A2292747F9CC00BBA14D /* ContentView.swift */; };
 		4296A22C2747F9CD00BBA14D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4296A22B2747F9CD00BBA14D /* Assets.xcassets */; };
@@ -17,6 +18,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		426FA7ED274F34160018AD9A /* MemojiThumbnailer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemojiThumbnailer.swift; sourceTree = "<group>"; };
+		426FA7EF274F34540018AD9A /* AVTStickerGeneratorOptions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AVTStickerGeneratorOptions.h; sourceTree = "<group>"; };
+		426FA7F0274F34540018AD9A /* AVTAvatarRecordRendering.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AVTAvatarRecordRendering.h; sourceTree = "<group>"; };
+		426FA7F1274F39350018AD9A /* AVTStickerGenerator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AVTStickerGenerator.h; sourceTree = "<group>"; };
+		426FA7F2274F39C20018AD9A /* AVTStickerConfiguration.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AVTStickerConfiguration.h; sourceTree = "<group>"; };
 		4296A2242747F9CC00BBA14D /* AvatarExport.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AvatarExport.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4296A2272747F9CC00BBA14D /* AvatarExportApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarExportApp.swift; sourceTree = "<group>"; };
 		4296A2292747F9CC00BBA14D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -72,6 +78,7 @@
 				4296A2412748212200BBA14D /* AvatarView.swift */,
 				4296A2272747F9CC00BBA14D /* AvatarExportApp.swift */,
 				4296A2292747F9CC00BBA14D /* ContentView.swift */,
+				426FA7ED274F34160018AD9A /* MemojiThumbnailer.swift */,
 				4296A22B2747F9CD00BBA14D /* Assets.xcassets */,
 				4296A2302747F9CD00BBA14D /* AvatarExport.entitlements */,
 				4296A22D2747F9CD00BBA14D /* Preview Content */,
@@ -93,7 +100,11 @@
 				4296A2382748104000BBA14D /* AVTAvatar.h */,
 				42CDAE832748FFCA00249005 /* AVTMemoji.h */,
 				42CDAE842749001800249005 /* AVTAvatarRecord.h */,
+				426FA7F0274F34540018AD9A /* AVTAvatarRecordRendering.h */,
 				42CDAE7F2748F8D900249005 /* AVTPAvatarRecordDataSource.h */,
+				426FA7F2274F39C20018AD9A /* AVTStickerConfiguration.h */,
+				426FA7F1274F39350018AD9A /* AVTStickerGenerator.h */,
+				426FA7EF274F34540018AD9A /* AVTStickerGeneratorOptions.h */,
 				4296A23B2748105400BBA14D /* AVTAnimoji.h */,
 				4296A243274824EF00BBA14D /* AVTView.h */,
 				4296A2372748104000BBA14D /* AvatarExport-Bridging-Header.h */,
@@ -183,6 +194,7 @@
 			files = (
 				4296A22A2747F9CC00BBA14D /* ContentView.swift in Sources */,
 				4296A2422748212200BBA14D /* AvatarView.swift in Sources */,
+				426FA7EE274F34160018AD9A /* MemojiThumbnailer.swift in Sources */,
 				4296A2282747F9CC00BBA14D /* AvatarExportApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
