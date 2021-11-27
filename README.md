@@ -1,7 +1,4 @@
 # AvatarExport
 Exports a model of a Memoji, or Animoji.
 
-# FAQ
-## Wait why are you linking to the framework directly?
-uhhhh
-
+This has been migrated into [AvatarStream](https://github.com/spotlightishere/AvatarStream).
