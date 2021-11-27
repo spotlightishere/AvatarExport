@@ -12,7 +12,6 @@ class MemojiThumbnailer: NSObject {
     let options = AVTStickerGeneratorOptions.default()
 
     var rendered: NSImage?
-    var avatar: AVTAvatar?
 
     func allPuppets() -> [AVTAvatarRecord] {
         var records: [AVTAvatarRecord] = []

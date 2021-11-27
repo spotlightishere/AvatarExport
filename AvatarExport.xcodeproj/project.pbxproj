@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4215B3452751DD35002A6376 /* AvatarIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4215B3442751DD35002A6376 /* AvatarIO.swift */; };
 		426FA7EE274F34160018AD9A /* MemojiThumbnailer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426FA7ED274F34160018AD9A /* MemojiThumbnailer.swift */; };
 		4296A2282747F9CC00BBA14D /* AvatarExportApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4296A2272747F9CC00BBA14D /* AvatarExportApp.swift */; };
 		4296A22A2747F9CC00BBA14D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4296A2292747F9CC00BBA14D /* ContentView.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4215B3442751DD35002A6376 /* AvatarIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarIO.swift; sourceTree = "<group>"; };
 		426FA7ED274F34160018AD9A /* MemojiThumbnailer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemojiThumbnailer.swift; sourceTree = "<group>"; };
 		426FA7EF274F34540018AD9A /* AVTStickerGeneratorOptions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AVTStickerGeneratorOptions.h; sourceTree = "<group>"; };
 		426FA7F0274F34540018AD9A /* AVTAvatarRecordRendering.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AVTAvatarRecordRendering.h; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 				4296A22B2747F9CD00BBA14D /* Assets.xcassets */,
 				4296A2302747F9CD00BBA14D /* AvatarExport.entitlements */,
 				4296A22D2747F9CD00BBA14D /* Preview Content */,
+				4215B3442751DD35002A6376 /* AvatarIO.swift */,
 			);
 			path = AvatarExport;
 			sourceTree = "<group>";
@@ -193,6 +196,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4296A22A2747F9CC00BBA14D /* ContentView.swift in Sources */,
+				4215B3452751DD35002A6376 /* AvatarIO.swift in Sources */,
 				4296A2422748212200BBA14D /* AvatarView.swift in Sources */,
 				426FA7EE274F34160018AD9A /* MemojiThumbnailer.swift in Sources */,
 				4296A2282747F9CC00BBA14D /* AvatarExportApp.swift in Sources */,
