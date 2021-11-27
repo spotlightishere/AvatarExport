@@ -8,6 +8,8 @@
 import Foundation
 
 class MemojiThumbnailer: NSObject {
+    static public let shared = MemojiThumbnailer()
+    
     let dataSource = AVTPAvatarRecordDataSource.defaultUIDataSource(withDomainIdentifier: Bundle.main.bundleIdentifier!)
     let options = AVTStickerGeneratorOptions.default()
 

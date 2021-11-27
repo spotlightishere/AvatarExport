@@ -5,10 +5,19 @@
 //  Created by Spotlight Deveaux on 2021-11-19.
 //
 
+import MultipeerKit
 import SwiftUI
 
 struct ContentView: View {
-    let thumbnailer = MemojiThumbnailer()
+    let thumbnailer = MemojiThumbnailer.shared
+    @ObservedObject var datasource: MultipeerDataSource = {
+        var config = MultipeerConfiguration.default
+        config.serviceType = "avatar"
+        config.security.encryptionPreference = .required
+        
+        let transceiver = MultipeerTransceiver(configuration: config)
+        return MultipeerDataSource(transceiver: transceiver)
+    }()
 
     var body: some View {
         NavigationView {
@@ -25,15 +34,23 @@ struct ContentView: View {
             ToolbarItem(placement: .primaryAction) {
                 Menu {
                     Button(action: {
-                        exporter(thumbnailer)
+                        exporter()
                     }) {
-                        Label("Share Memoji to Property List", systemImage: "square.and.arrow.up")
+                        Label("Share Memoji to Clipboard", systemImage: "square.and.arrow.up")
                     }
+                    Button(action: {
+                        let all = getMemoji()
+                        datasource.transceiver.send(all, to: datasource.transceiver.availablePeers)
+                    }) {
+                        Label("Share Memoji to Local Devices", systemImage: "square.and.arrow.up")
+                    }.disabled(datasource.availablePeers.isEmpty)
                 } label: {
                     Label("Share", systemImage: "square.and.arrow.up")
                 }
             }
-        }
+        }.onAppear(perform: {
+            datasource.transceiver.resume()
+        })
     }
 }
 
